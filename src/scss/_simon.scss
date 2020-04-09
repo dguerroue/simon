@@ -1,0 +1,63 @@
+.simon-game {
+  margin: 0 20px;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+.simon-block {
+  // ratio 1:1
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-top: 100%;
+  
+  margin: 5px;
+  background-color: crimson;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:active {
+    transform: scale(0.9);
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  &.active {
+    transform: scale(0.95);
+    box-shadow: inset 0px 0px 0px 5px white;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &.simon-block--green {
+    background-color: $color-green;
+  }
+  &.simon-block--red {
+    background-color: $color-red;
+  }
+  &.simon-block--yellow {
+    background-color: $color-yellow;
+  }
+  &.simon-block--blue {
+    background-color: $color-blue;
+  }
+}
