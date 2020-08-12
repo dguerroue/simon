@@ -1,8 +1,8 @@
 {
-  "name": "gulp-starter",
+  "name": "simon",
   "version": "1.0.0",
   "license": "UNLICENSED",
-  "description": "A basic Gulp build system.",
+  "description": "jeu simon",
   "main": "gulpfile.js",
   "scripts": {
     "watch": "gulp watch",

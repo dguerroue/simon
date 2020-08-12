@@ -1,7 +1,12 @@
-# gulp-starter
-gulp 4 starter kit
+# Jeu simon 
+
+Simple jeu simon de mémoire
 
 ---
+
+## TODO
+
+- [ ] Refactor en utilisant un framework (Vuejs / React)
 
 ## Get started
 ```bash
