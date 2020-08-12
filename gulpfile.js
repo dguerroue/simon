@@ -53,7 +53,7 @@ function scssMin() {
     .pipe(cssmin())
     .pipe(rename({
       basename: 'style',
-      suffix: '.min'
+      // suffix: '.min'
     }))
     .pipe(gulp.dest('public/css'))
     .pipe(browserSync.stream());

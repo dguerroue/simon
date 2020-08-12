@@ -1,10 +1,21 @@
 .simon-game {
+  display: flex;
+  flex-direction: column;
   margin: 0 20px;
 
   @media screen and (min-width: 480px) {
     max-width: 480px;
     margin: 0 auto;
   }
+}
+
+.simon-points {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 10px 0 30px;
+  margin-left: auto;
+  background-color: #FFF;
+  border-radius: 4px;
 }
 
 .simon-block {
@@ -17,7 +28,7 @@
   margin: 5px;
   background-color: crimson;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
 
   &:active {
     transform: scale(0.9);
@@ -33,9 +44,15 @@
     }
   }
 
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
   &.active {
     transform: scale(0.95);
-    box-shadow: inset 0px 0px 0px 5px white;
+    box-shadow: inset 0px 0px 0px 6px white;
+    opacity: 1;
 
     &::after {
       content: '';
@@ -47,6 +64,7 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
   }
+
 
   &.simon-block--green {
     background-color: $color-green;
