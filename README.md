@@ -6,7 +6,7 @@ Simple jeu simon de mémoire
 
 ## TODO
 
-- [ ] Refactor en utilisant un framework (Vuejs / React)
+- [ ] Réecrire le code en utilisant un framework js (Vuejs / React)
 
 ## Get started
 ```bash
